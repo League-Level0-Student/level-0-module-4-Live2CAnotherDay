@@ -9,7 +9,15 @@ public class GameOver {
 		boolean gameOver = false;
 		
 		// 1. Ask the user if the game is over and save their answer.
-		
+		while (gameOver == false) {
+			String answer = JOptionPane.showInputDialog(" Is the game over? Reply with yes or no: ");
+			if (answer.equalsIgnoreCase("yes")){
+				gameOver = true;
+			}else {
+				gameOver = false;
+			}
+		}
+		JOptionPane.showMessageDialog(null, "The game is truely over. :D Goodbye."); 
 		// 2. If they answer "yes" change gameOver to true.
 		
 		// 3. Surround steps 1-2 in a while loop that runs as long as
@@ -20,3 +28,4 @@ public class GameOver {
 	}
 
 }
+/// Nothing else to work on here
