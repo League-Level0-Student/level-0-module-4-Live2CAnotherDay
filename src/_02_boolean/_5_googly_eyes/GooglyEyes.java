@@ -3,6 +3,8 @@ package _02_boolean._5_googly_eyes;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+
+
 /*
  * Goal: Put googly eyes on a face!
  * 
@@ -37,8 +39,8 @@ import processing.core.PImage;
  *    to the boundary. Put this code before you draw the pupils.
  */
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 800;
-    static final int HEIGHT = 600;
+    static final int WIDTH = 10000;
+    static final int HEIGHT = 10000;
     
     PImage face;
     
@@ -49,12 +51,14 @@ public class GooglyEyes extends PApplet {
     
     @Override
     public void setup() {
-
+    	face = loadImage("bob ross.png");
+    	face.resize(1000,1000);
     }
 
     @Override
     public void draw() {
-
+    	ellipse(50, 50, 400, 200);
+    	ellipse(50, 50, 400, 400);
     }
 
     static public void main(String[] args) {
