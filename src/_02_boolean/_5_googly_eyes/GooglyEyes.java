@@ -39,8 +39,8 @@ import processing.core.PImage;
  *    to the boundary. Put this code before you draw the pupils.
  */
 public class GooglyEyes extends PApplet {
-    static final int WIDTH = 10000;
-    static final int HEIGHT = 10000;
+    static final int WIDTH = 1000;
+    static final int HEIGHT = 1000;
     
     PImage face;
     
@@ -58,6 +58,7 @@ public class GooglyEyes extends PApplet {
     @Override
     public void draw() {
     	ellipse(50, 50, 400, 200);
+    	fill(255, 255, 255);
     	ellipse(50, 50, 400, 400);
     }
 
