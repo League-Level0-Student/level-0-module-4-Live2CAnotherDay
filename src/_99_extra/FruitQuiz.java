@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 public class FruitQuiz extends KeyAdapter {
 
@@ -14,6 +15,8 @@ public class FruitQuiz extends KeyAdapter {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
 		question2 = new JLabel("<html>Which is not a real vegetable? <br>A: Carrot <br> B: Tomato <br> C: Onion</html>" );
+		question3 = new JLabel("<html>Which is not a real Actor? <br>A: Naruto Uzimaki <br> B: Dwayne Johnson  <br> C: Ryan Reynolds</html>" );
+		question4 = new JLabel("<html>Which is not a real vegetable? <br>A: Carrot <br> B: Tomato <br> C: Onion</html>" );
 	}
 
 	@Override
@@ -34,12 +37,41 @@ public class FruitQuiz extends KeyAdapter {
 			
 		if (question1.isShowing()) {
 			// 3. If they selected the right fruit, do steps 4 and 7
-			if (JLabel = cVariable){
+			if (keyCode == cVariable){
 				correct();
 				nextQuestion(question2);
 			}else {
-				incorrect()
+				incorrect();
 			}
+		}	
+		if (question2.isShowing()) {
+				
+			if (keyCode == bVariable){
+				correct();
+				nextQuestion(question3);
+			}else {
+				incorrect();
+			}
+		}
+		if (question3.isShowing()) {
+				
+			if (keyCode == aVariable){
+				correct();
+				nextQuestion(question4);
+			}else {
+				incorrect();
+			}
+		}
+		if (question4.isShowing()) {
+				
+			if (keyCode == bVariable){
+				correct();
+				JOptionPane.showMessageDialog(null, "Congratz On Finishing the Quiz! Goodbye :)");
+				System.exit(0);
+			}else {
+				incorrect();
+			}
+		}
 				// 4. Call the correct() method
 				
 				// 7. Use the nextQuestion() method to go to question2
@@ -49,7 +81,7 @@ public class FruitQuiz extends KeyAdapter {
 				
 				// 9. Call the incorrect() method
 		
-		}
+		
 
 	}
 
